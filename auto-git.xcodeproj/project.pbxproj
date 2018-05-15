@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C704F04220A8BCAE006597D3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C704F04120A8BCAE006597D3 /* main.cpp */; };
+		C704F04A20A8DD88006597D3 /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C704F04920A8DD88006597D3 /* libboost_system-mt.dylib */; };
+		C75044E820AA4D65002D35B9 /* libboost_filesystem-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C75044E720AA4D64002D35B9 /* libboost_filesystem-mt.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		C704F03E20A8BCAE006597D3 /* auto-git */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "auto-git"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C704F04120A8BCAE006597D3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C704F04920A8DD88006597D3 /* libboost_system-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_system-mt.dylib"; path = "../../../../opt/local/lib/libboost_system-mt.dylib"; sourceTree = "<group>"; };
+		C75044E720AA4D64002D35B9 /* libboost_filesystem-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_filesystem-mt.dylib"; path = "../../../../opt/local/lib/libboost_filesystem-mt.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75044E820AA4D65002D35B9 /* libboost_filesystem-mt.dylib in Frameworks */,
+				C704F04A20A8DD88006597D3 /* libboost_system-mt.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				C704F04020A8BCAE006597D3 /* auto-git */,
 				C704F03F20A8BCAE006597D3 /* Products */,
+				C704F04820A8DD87006597D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,15 @@
 				C704F04120A8BCAE006597D3 /* main.cpp */,
 			);
 			path = "auto-git";
+			sourceTree = "<group>";
+		};
+		C704F04820A8DD87006597D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C75044E720AA4D64002D35B9 /* libboost_filesystem-mt.dylib */,
+				C704F04920A8DD88006597D3 /* libboost_system-mt.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +253,15 @@
 		C704F04620A8BCAE006597D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 825A6Q5Z2E;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.67.0_1/include/;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.67.0_1/lib/,
+					/opt/local/lib,
+				);
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,8 +269,15 @@
 		C704F04720A8BCAE006597D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 825A6Q5Z2E;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.67.0_1/include/;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.67.0_1/lib/,
+					/opt/local/lib,
+				);
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
