@@ -3,7 +3,7 @@
 //  auto-git
 //
 //  Created by Ray's macbook on 5/13/18.
-//  Copyright © 2018 crank. All rights reserved.
+//  Copyright © 2018 crank. All rights reserved.test
 //
 #include <iostream>
 #include <boost/process.hpp>
