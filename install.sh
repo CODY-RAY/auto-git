@@ -8,7 +8,7 @@ main() {
   }
 
   env brew install boost || {
-    printf "Error: download failed\n"
+    printf "Error: boost install failed\n"
     exit 1
   }
   if [ -e "$file" ]; then
