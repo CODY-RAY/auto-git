@@ -6,6 +6,11 @@ main() {
     printf "Error: download failed\n"
     exit 1
   }
+
+  env brew install boost || {
+    printf "Error: download failed\n"
+    exit 1
+  }
   if [ -e "$file" ]; then
      env chmod +x "$file"|| {
     printf "Error: linking failed\n"
